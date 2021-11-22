@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include= FALSE}
-knitr::opts_knit$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 ```
 
@@ -18,22 +18,27 @@ library(ggplot2)
 ```{r}
 plot(linechart)
 ```
+## Why did I include a line chart 
 
+I included this line chart because it demonstrates how the Black population, Latino population, and Asian population in jail fluctuated from 1990 to 2018 in Washington state. It specifically shows how black individuals were dispropinately a large percentage of the jail population in 1990, and even in 2018 they consist of the large majority however it has decreased a little bit since 1990. Another pattern that emerged in this chart is that the Latino percentage in jail fluctuated a lot from 1990 to 2018 consistently but the overall general trend is that Latino percentage in jail did not change that much. Lastly, when analyzing the Asian population in jail, there is a general upward trend which is greatly seen in the graph. 
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-```{r}
-
-```
 
 ```{r, echo=FALSE}
 plot(scatterplot)
 ```
+  This scatterplot demonstrates how the percentage of the Latino population compares to the percentage of Latino population in jail in Washington state in 1990. This graph evidently shows that there is a large majority of data points when the Latino population is less than 5% but the Latino population in jail is greater than 10% and even close to 15%. In fact, there are a couple data points that show how the percentage of Latino population is less than 20% but the Latino percentage in jail is around 40% which demonstrates how the Latino population are disproportionately represented in the prison population. 
+
+
 
 ```{r}
 plot(incarceration_map)
 ```
+  I included this map to visualize which counties in Washington have a high vs low prison population in the most recent year (2018). From this visualization model, I noticed that King County has the highest jail population in 2018 and some of the Eastern and Western counties have the lowest jail population.  
+
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
