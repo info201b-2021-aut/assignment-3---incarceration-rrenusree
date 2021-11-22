@@ -1,0 +1,39 @@
+---
+title: "index"
+author: "Renusree"
+date: "11/16/2021"
+output: html_document
+---
+
+```{r setup, include= FALSE}
+knitr::opts_knit$set(echo = TRUE)
+library(ggplot2)
+```
+
+## Introduction and Summary Information:
+
+  The prison population and the demographics of the prison population contribute a lot to the the racism we currently see in American society. There have been profound race related trends in the prison population in the US from the 1990s and the dataset I will be exploring with this assignment provides a closer look at how race and region plays a larger role in prison populations. 
+  While exploring the dataset and doing calculations specifically incarceration trends in Washington state, I found that the percent of males in Washington state jails in 1990 was 87.5% and then in 2018 the number went down to 81.25% which wasn't a big difference over the course of 28 years. Afterwards, I went to analyze how race plays a role in jail populations in Washington state and found that in 1990, Washington state's black population was 1.7% and the black jail population was 17.2% which is a disproportinate representation of the black population. I then did the same analysis in 2018 and found that then in Washington state the black population was 3.28% and the black jail population was 15.6% which is still a disproportionate representation but better than the representation in 1990.
+
+```{r}
+plot(linechart)
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+
+```
+
+```{r, echo=FALSE}
+plot(scatterplot)
+```
+
+```{r}
+plot(incarceration_map)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
