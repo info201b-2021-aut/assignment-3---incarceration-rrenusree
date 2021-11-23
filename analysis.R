@@ -1,6 +1,7 @@
 #analysis for a3
 
-incarceration_trends <- read.csv("/Users/renusree/Desktop/UW_1YEAR/INFO201/assignment-3---incarceration-rrenusree/incarceration-trends/incarceration_trends.csv")
+
+incarceration_trends <- read.csv("~/Desktop/UW_1YEAR/INFO201/assignment-3---incarceration-rrenusree/incarceration_trends.csv")
 
 library("knitr")
 library("tidyverse")
@@ -23,7 +24,7 @@ wa_2018_incarceration_trends <- na.omit(wa_incarceration_trends[wa_incarceration
 sum_1990_jailpop_incarceration_wa <- sum(wa_1990_incarceration_trends$total_jail_pop)
 sum_2018_jailpop_incarceration_wa <- sum(wa_2018_incarceration_trends$total_jail_pop)
 difference_jailpop_incarceration <- sum_2018_jailpop_incarceration_wa - sum_1990_jailpop_incarceration_wa
-percent_increase_incarceration_wa <- (difference_incarceration/sum_1990_incarceration_wa)*100
+percent_increase_incarceration_wa <- (difference_jailpop_incarceration/sum_1990_jailpop_incarceration_wa)*100
 
 
 sum_jailmales_1990_wa <- sum(wa_1990_incarceration_trends$male_adult_jail_pop)
@@ -104,7 +105,7 @@ percent_male_jailpop_2018_wa <- (male_jailpop_2018_wa/total_jailpop_2018_wa)*100
 
 scatterplot <- ggplot(data = wa_1990_incarceration_trends) +
   geom_point(
-    mapping = aes(x = latinx_pop_percentage, y = latinx_jail_pop_by_totalpop),
+    mapping = aes(x = wa_1990_incarceration_trends$latinx_pop_percentage1990, y = wa_1990_incarceration_trends$latinx_jail_pop_by_totalpop),
     alpha = .6
   ) +
   
@@ -120,7 +121,7 @@ wa_1990_incarceration_trends <-mutate(wa_1990_incarceration_trends,
                                  latinx_jail_pop_by_totalpop = (latinx_jail_pop/total_jail_pop)*100)
 
 wa_1990_incarceration_trends <-mutate(wa_1990_incarceration_trends,
-                                 latinx_pop_percentage = (latinx_pop_15to64/total_pop)*100)
+                                 latinx_pop_percentage1990 = (latinx_pop_15to64/total_pop)*100)
 
 
 # Create a map of Washington state and the prison population in 2018
